@@ -1,7 +1,7 @@
 # Build the image.
 .PHONY: build
 build:
-	docker build -t giordan/essentials -f Dockerfile .
+	docker build -t giordan/d-essentials -f Dockerfile .
 
 # Stop and remove all containers.
 .PHONY: clean
@@ -12,7 +12,7 @@ clean:
 # Remove the image.
 .PHONY: clean-image
 clean-image:
-	docker rm giordan/essentials
+	docker rm giordan/d-essentials
 
 # List all containers.
 .PHONY: ls
@@ -27,4 +27,4 @@ ls-images:
 # Run the interactive container.
 .PHONY: run
 run:
-	docker run -i -t --name essentials-container giordan/essentials
+	docker run -i -t --name essentials-container giordan/d-essentials
