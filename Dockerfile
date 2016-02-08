@@ -12,7 +12,9 @@ RUN apt-get install -y \
     vim \
     curl \
     git \
-    wget
+    wget \
+    dnsutils \
+    htop
 
 ENTRYPOINT ["/bin/bash"]
 
