@@ -16,6 +16,9 @@ RUN apt-get install -y \
     dnsutils \
     htop
 
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 ENTRYPOINT ["/bin/bash"]
 
 CMD []
