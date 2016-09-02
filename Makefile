@@ -12,7 +12,7 @@ clean:
 # Remove the image.
 .PHONY: clean-image
 clean-image:
-	docker rm giordan/d-essentials
+	docker rmi giordan/d-essentials
 
 # List all containers.
 .PHONY: ls
