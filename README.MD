@@ -11,7 +11,7 @@
     prompt> make
     prompt> make run
 
-# Make http requests to the container
+# Make http requests from host
 
 Docker file creates a file named `indes.php` that contains "ciao" string.
 
