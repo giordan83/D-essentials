@@ -14,11 +14,14 @@ RUN apt-get install -y \
     git \
     wget \
     dnsutils \
+    php5 \
     htop
 
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENTRYPOINT ["/bin/bash"]
+RUN echo "ciao" > ./index.php
 
-CMD []
+EXPOSE 8888
+
+# ENTRYPOINT ["/bin/bash"]
