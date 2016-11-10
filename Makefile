@@ -27,4 +27,4 @@ ls-images:
 # Run the interactive container.
 .PHONY: run
 run:
-	docker run -i -t --name essentials-container giordan/d-essentials
+	docker run -d -p 8888:8888 -i -t --name essentials-container giordan/d-essentials php -S 0.0.0.0:8888 -t .
