@@ -29,4 +29,4 @@ ls-images:
 # Run the interactive container.
 .PHONY: run
 run:
-	docker run -d -p 8888:8888 -i -t --name $(tagname) giordan/d-essentials php -S 0.0.0.0:8888 -t .
+	docker run -d -p 8888:8888 -v /Users/sensorario/Development/github.com/sensorario/d-essentials/www:/var/www -i -t --name $(tagname) giordan/d-essentials php -S 0.0.0.0:8888 -t /var/www

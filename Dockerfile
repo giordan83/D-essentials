@@ -5,7 +5,7 @@
 # Pull the base image.
 FROM debian:jessie
 
-MAINTAINER Gabriele Giuranno <gabrielegiuranno@gmail.com>
+MAINTAINER Simone Gentili <sensorario@gmail.com>
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -20,7 +20,7 @@ RUN apt-get install -y \
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN echo "ciao" > ./index.php
+# RUN echo "ciao" > ./index.php
 
 EXPOSE 8888
 
