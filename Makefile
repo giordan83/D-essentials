@@ -1,3 +1,5 @@
+tagname = container-name
+
 # Build the image.
 .PHONY: build
 build:
@@ -6,8 +8,8 @@ build:
 # Stop and remove all containers.
 .PHONY: clean
 clean:
-	docker stop essentials-container
-	docker rm essentials-container
+	docker stop $(tagname)
+	docker rm $(tagname)
 
 # Remove the image.
 .PHONY: clean-image
@@ -27,4 +29,4 @@ ls-images:
 # Run the interactive container.
 .PHONY: run
 run:
-	docker run -i -t --name essentials-container giordan/d-essentials
+	docker run -d -p 8888:8888 -v /Users/sensorario/Development/github.com/sensorario/d-essentials/www:/var/www -i -t --name $(tagname) giordan/d-essentials php -S 0.0.0.0:8888 -t /var/www
